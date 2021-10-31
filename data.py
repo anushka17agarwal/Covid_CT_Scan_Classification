@@ -59,5 +59,5 @@ train_loader = DataLoader(dataset= dataset, batch_size= 10, shuffle= True)
 
 dataiter= iter(train_loader)
 images, labels = dataiter.next()
-print(len(images))
-
+images= images.reshape(10, 3, 150, 150)
+print(images.shape)
