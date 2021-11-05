@@ -20,7 +20,7 @@ class Ctdataset(Dataset):
             self.image.append(i[0])
             self.labels.append(i[1])
 
-        print(len(self.image), len(self.labels))
+        #print(len(self.image), len(self.labels))
         #self.class_map = {"0": 0, "1":1 , "2": 2}  
 
     def __len__(self):
@@ -47,17 +47,9 @@ class Ctdataset(Dataset):
         #     image= augumentations["img"]
 
         #label= self.class_map[label]
+        #print("Returning IMG AND Label")
         return img, label
     
         
 
-train_path = os.path.join("files", "test_COVIDx_CT-2A.txt")  
-test_path = os.path.join("files", "train_COVIDx_CT-2A.txt")
 
-dataset = Ctdataset(train_path)
-train_loader = DataLoader(dataset= dataset, batch_size= 10, shuffle= True)
-
-dataiter= iter(train_loader)
-images, labels = dataiter.next()
-images= images.reshape(10, 3, 150, 150)
-print(images.shape)
