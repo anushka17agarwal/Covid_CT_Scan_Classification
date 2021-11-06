@@ -65,32 +65,31 @@ for epoch in tqdm(range(num_epochs)):
         train_accuracy+=int(torch.sum(prediction==labels.data))
         #print(train_accuracy, "after epoch")
         
-    train_accuracy=train_accuracy/len(train_loader)
-    print(train_accuracy, "train accuracy")
-    #train_loss=train_loss/train_count
+        train_accuracy=train_accuracy/len(train_loader)
+        print(train_accuracy, "train accuracy")
+        #train_loss=train_loss/train_count
     
     
-    # Evaluation on testing dataset
-    model.eval()
+        # Evaluation on testing dataset
+        model.eval()
     
-    test_accuracy=0.0
-    for i, (images,labels) in enumerate(test_loader):
-        print("converting image and labels for testing")
-        images= images.float()
-        images= images.permute(0,3,1,2)
-        images= images.to(device)
-        labels= labels.to(device)
-        outputs=model(images)
-        #images= images.float()
-        #_,prediction=torch.max(outputs.data,1)
-        #test_accuracy+=int(torch.sum(prediction==labels.data))
-    
-    test_accuracy=test_accuracy/len(test_loader)
-    
-    
-    print('Epoch: '+str(epoch)+' Train Loss: '+str(train_loss)+' Train Accuracy: '+str(train_accuracy)+' Test Accuracy: '+str(test_accuracy))
-    
-    #Save the best model
-    if test_accuracy>best_accuracy:
-        torch.save(model.state_dict(),'best_checkpoint.model')
-        best_accuracy=test_accuracy
+        test_accuracy=0.0
+        for i, (images,labels) in enumerate(test_loader):
+            images= images.float()
+            images= images.permute(0,3,1,2)
+            images= images.to(device)
+            labels= labels.to(device)
+            outputs=model(images)
+            #images= images.float()
+            #_,prediction=torch.max(outputs.data,1)
+            #test_accuracy+=int(torch.sum(prediction==labels.data))
+        
+        test_accuracy=test_accuracy/len(test_loader)
+        
+        
+        print('Epoch: '+str(epoch)+' Train Loss: '+str(train_loss)+' Train Accuracy: '+str(train_accuracy)+' Test Accuracy: '+str(test_accuracy))
+        
+        #Save the best model
+        if test_accuracy>best_accuracy:
+            torch.save(model.state_dict(),'best_checkpoint.model')
+            best_accuracy=test_accuracy

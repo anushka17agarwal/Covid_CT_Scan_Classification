@@ -34,7 +34,7 @@ class BConv(nn.Module):
         # output=self.conv3(output)
         # output=self.bn3(output)
         # output=self.relu3(output)
-        print(output.shape)
+        #print(output.shape)
             
             #Above output will be in matrix form, with shape (256,32,75,75)
         
