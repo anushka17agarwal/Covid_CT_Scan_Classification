@@ -1,2 +1,0 @@
-[1:29:14<8:10:27, 2675.18s/it]Train Loss: 0.026 | Accuracy: 99.146
-Test Loss: 1.190 | Accuracy: 76.404
