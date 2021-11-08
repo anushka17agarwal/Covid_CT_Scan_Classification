@@ -11,14 +11,20 @@ This is the implementation of a convolutional Neural Network on <a href= "https:
 
 Link to download the dataset: <a href="https://www.kaggle.com/hgunraj/covidxct"> Here </a>
 
-## Convolutional Neural Network
-![alt text](https://github.com/anushka17agarwal/Covid_CT_Scan_Classification/blob/main/download.jpg)
 
 ## Downloading the trained Model:
 <a href="https://drive.google.com/file/d/1n-7OYvLqkg0E5VNBypnV5tDTAFSlH_o_/view?usp=sharing"> Here </a>
 
 
 ## Accuracy Scores
+
+## After 3 epochs
+## basic cnn
 - Train Loss: 0.026 | Accuracy: 99.146
 - Test Loss: 1.190 | Accuracy: 76.404
-     
+
+##    resnet
+
+- Train Loss: 0.024 | Accuracy: 99.229
+- Test Loss: 1.056 | Accuracy: 79.012
+ 

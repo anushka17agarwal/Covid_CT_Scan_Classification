@@ -7,6 +7,9 @@ import torch
 import torch.nn as nn
 from torch.autograd import Variable
 from tqdm import tqdm
+
+#for resnet
+from resnet import resnet
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 #Loading the data
 
@@ -21,7 +24,7 @@ train_loader = DataLoader(dataset= train_dataset, batch_size= 10, shuffle= True)
 test_loader= DataLoader(dataset= test_dataset, batch_size= 10, shuffle= True)
 # dataiter= iter(test_loader)
 # images, labels = dataiter.next()
-model= BConv()
+model= resnet()
 #print(len(train_dataset))
 #print(len(test_dataset))
 #starting with training
