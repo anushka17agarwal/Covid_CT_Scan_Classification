@@ -19,11 +19,11 @@ Link to download the dataset: <a href="https://www.kaggle.com/hgunraj/covidxct">
 ## Accuracy Scores
 
 ## After 3 epochs
-## basic cnn
+### basic cnn
 - Train Loss: 0.026 | Accuracy: 99.146
 - Test Loss: 1.190 | Accuracy: 76.404
 
-##    resnet
+###    resnet
 
 - Train Loss: 0.024 | Accuracy: 99.229
 - Test Loss: 1.056 | Accuracy: 79.012
