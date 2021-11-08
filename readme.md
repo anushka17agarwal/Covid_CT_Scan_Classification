@@ -11,6 +11,8 @@ This is the implementation of a convolutional Neural Network on <a href= "https:
 
 Link to download the dataset: <a href="https://www.kaggle.com/hgunraj/covidxct"> Here </a>
 
+## Convolutional Neural Network
+![alt text](https://github.com/anushka17agarwal/Covid_CT_Scan_Classification/blob/main/download.jpg)
 
 ## Downloading the trained Model:
 <a href="https://drive.google.com/file/d/1n-7OYvLqkg0E5VNBypnV5tDTAFSlH_o_/view?usp=sharing"> Here </a>
