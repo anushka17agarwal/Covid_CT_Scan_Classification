@@ -10,6 +10,7 @@ from tqdm import tqdm
 
 #for resnet
 from resnet import resnet
+from vgg import vgg
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 #Loading the data
 
@@ -28,7 +29,7 @@ test_loader= DataLoader(dataset= test_dataset, batch_size= 10, shuffle= True)
 #print(len(train_dataset))
 #print(len(test_dataset))
 #starting with training
-model= resnet().to(device)
+model= vgg().to(device)
 optimizer=Adam(model.parameters(),lr=0.001,weight_decay=0.0001)
 loss_function=nn.CrossEntropyLoss().cuda()
 num_epochs=13
