@@ -28,3 +28,7 @@ Link to download the dataset: <a href="https://www.kaggle.com/hgunraj/covidxct">
 - Train Loss: 0.024 | Accuracy: 99.229
 - Test Loss: 1.056 | Accuracy: 79.012
  
+
+### VGG-16
+- Train Loss: 13.014 | Accuracy: 70.982
+- Test Loss: 12.807 | Accuracy: 58.678
