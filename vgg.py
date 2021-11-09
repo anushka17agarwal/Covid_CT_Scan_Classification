@@ -6,14 +6,14 @@ import torchvision
 from torchvision import datasets, models, transforms
 from torch.optim import Adam
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-def resnet():
+def vgg():
         
     model =  models.vgg16(pretrained=True)
 
     for param in model.parameters():
         param.requires_grad = False
 
-    num_ftrs = model.classifier[0].in_features
+    num_ftrs = model.classifier[6].in_features
     model.classifier[6] = nn.Linear(num_ftrs, 3)
     model.to(device)
 
@@ -21,5 +21,4 @@ def resnet():
     loss_function=nn.CrossEntropyLoss().cuda()
     print(model)
     return model
-
-a= resnet()
+s= vgg()
