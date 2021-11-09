@@ -24,11 +24,11 @@ train_loader = DataLoader(dataset= train_dataset, batch_size= 10, shuffle= True)
 test_loader= DataLoader(dataset= test_dataset, batch_size= 10, shuffle= True)
 # dataiter= iter(test_loader)
 # images, labels = dataiter.next()
-model= resnet()
+ 
 #print(len(train_dataset))
 #print(len(test_dataset))
 #starting with training
-model= BConv().to(device)
+model= resnet().to(device)
 optimizer=Adam(model.parameters(),lr=0.001,weight_decay=0.0001)
 loss_function=nn.CrossEntropyLoss().cuda()
 num_epochs=13
