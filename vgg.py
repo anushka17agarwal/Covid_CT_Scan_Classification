@@ -6,6 +6,7 @@ import torchvision
 from torchvision import datasets, models, transforms
 from torch.optim import Adam
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
 def vgg():
         
     model =  models.vgg16(pretrained=True)
