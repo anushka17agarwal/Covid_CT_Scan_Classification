@@ -12,7 +12,6 @@ from tqdm import tqdm
 from vgg import vgg
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-#Loading the data
 
 train_path = os.path.join("files", "train_COVIDx_CT-2A.txt")  
 test_path = os.path.join("files", "test_COVIDx_CT-2A.txt")
