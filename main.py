@@ -8,8 +8,9 @@ import torch.nn as nn
 from torch.autograd import Variable
 from tqdm import tqdm
 
-#for resnet
+
 from vgg import vgg
+from resnet import resnet
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
