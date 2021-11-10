@@ -116,5 +116,5 @@ for epoch in tqdm(range(num_epochs)):
 
     
     
-    torch.save(model.state_dict(),'best_checkpoint.model')
+    torch.save(model.state_dict(),'ResNet.model')
   
