@@ -8,7 +8,7 @@ import torch.nn as nn
 from torch.autograd import Variable
 from tqdm import tqdm
 
-
+#from vgg import vgg16
 from vgg import vgg
 from resnet import resnet
 
